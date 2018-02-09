@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="widht=device-width, inital-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Lab4 - Ready Player 1</title>
+        <link href="index.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <!-- <script src="script.js"></script> -->
+        <div id="StartGameWrap">
+            <button id="StartGame" class="btn">Start Game</button>
+        </div>
+        <div id="GameOnWrap">
+            <div id="enemyStats">
+                <img id="enemyPic" src="slime.png" alt=""/>
+                <div id="enemyHealth" class="gbar">
+                    <div></div>
+                </div>
+
+            </div>
+            <div id="battleDesc"></div>
+            <div id="Commands">
+                <button id="attack" class="btn">Attack</button>
+                <button id="heal" class="btn">Heal</button>
+                <button id="run" class="btn">Run</button>
+            </div>
+            <div id="playerStatus">
+                <div id="HP">
+                    <h4>HP</h4>
+                    <div id="yourHealth" class="gbar">
+                       <div></div>
+                    </div>
+                </div>
+                <div id="HealsRemaining">                    
+                    <h4>Heals Remaining</h4>
+                    <span>0</span>
+                </div>
+                <div id="Knockdowns">                 
+                    <h4>Enemy Knockdowns</h4>
+                    <div id="wins" class="gbar">
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+
+    </body>
+</html>
