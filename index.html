@@ -8,48 +8,52 @@
         <link href="index.css" rel="stylesheet" type="text/css" />
     </head>
     <body>
-        <!-- <script src="script.js"></script> -->
         <div id="StartGameWrap">
-            <button id="StartGame" class="btn">Start Game</button>
+            <button id="StartGameBtn" class="btn">Start Game</button>
         </div>
-        <div id="GameOnWrap">
+        <div id="GameOnWrap" class="off">
             <div id="enemyStats">
-                <img id="enemyPic" src="slime.png" alt=""/>
+                <div id="PicWrap"><img id="enemyPic" src="slime.png" class="enemyHit" alt=""/></div>
                 <div id="enemyHealth" class="gbar">
                     <div></div>
                 </div>
 
             </div>
             <div id="battleDesc"></div>
-            <div id="Commands">
-                <button id="attack" class="btn">Attack</button>
-                <button id="heal" class="btn">Heal</button>
-                <button id="run" class="btn">Run</button>
-            </div>
-            <div id="playerStatus">
-                <div id="HP">
-                    <h4>HP</h4>
-                    <div id="yourHealth" class="gbar">
-                       <div></div>
-                    </div>
+            <div id="ControlPanel">
+                <div id="Commands">
+                    <button id="Attack" class="btn">Attack</button>
+                    <button id="Heal" class="btn">Heal</button>
+                    <button id="Run" class="btn">Run</button>
                 </div>
-                <div id="HealsRemaining">                    
-                    <h4>Heals Remaining</h4>
-                    <span>0</span>
-                </div>
-                <div id="Knockdowns">                 
-                    <h4>Enemy Knockdowns</h4>
-                    <div id="wins" class="gbar">
+                <div id="playerStatus">
+                    <div id="HP">
+                        <h4>HP</h4>
+                        <div id="yourHealth" class="gbar">
                         <div></div>
+                        </div>
+                    </div>
+                    <div id="HealsRemaining">                    
+                        <h4>Heals Remaining</h4>
+                        <span>0</span>
+                    </div>
+                    <div id="KnockOuts">                 
+                        <h4>Enemy Knockdowns</h4>
+                        <div id="wins" class="gbar">
+                            <div></div>
+                        </div>
                     </div>
                 </div>
-            </div>
+             </div>
 
 
-
+        </div>        
+        <div id="GameOff" class="off">
+            <h1>Game Over</h1>
         </div>
 
 
+        <script src="script.js"></script>
 
     </body>
 </html>
