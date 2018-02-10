@@ -114,11 +114,18 @@ function startCombat(){
   //---------------------------------------------------------------------------------------------------------heal
 
   healBtn.addEventListener('click', function (){ 
-    if (character.healRemaining > 0 ){  
+  if (character.healRemaining > 0 && character.health === character.totalhealth ){  
+      battleDesc.innerHTML =`You realize your health is already good and save your Heal!`;  
+      
+  }else if (character.healRemaining > 0 ){  
         var restore = character.heal();      
         battleDesc.innerHTML =`You have healed yourself by ${restore} points! you only have ${character.healRemaining} heals remaining.`;
         var bar = getPercent(character.health, character.totalhealth);
         yourHealthBar.style.width =`${bar}%`;
+        yourHealthBar.classList.add("heal");
+        setTimeout(function(){ 
+          yourHealthBar.classList.remove("heal");
+        }, 1000);
         
     }else if( character.healRemaining <= 0){
       battleDesc.innerHTML = `No Heals Remaining!`;

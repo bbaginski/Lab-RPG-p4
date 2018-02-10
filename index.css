@@ -55,6 +55,7 @@ h4{
     transition-timing-function: ease-out;
     transition: 1s;
   }
+
   #enemyStats{
       text-align: center;   
       padding:5px 0;   
@@ -123,6 +124,9 @@ h4{
 
   #yourHealth div{ 
     background:red; 
+  }
+  #yourHealth .heal{
+      background:blue
   }
   #wins div{
     background: brown;
