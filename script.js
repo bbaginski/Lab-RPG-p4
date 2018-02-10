@@ -13,10 +13,6 @@ var enemyPic = document.getElementById('enemyPic');
 var enemyShake = document.getElementById('PicWrap'); 
 var enemyStats = document.getElementById('enemyStats');
 
-
-
-
-
 var attackBtn = document.getElementById('Attack');  
 var healBtn = document.getElementById('Heal');  
 var runBtn = document.getElementById('Run');  

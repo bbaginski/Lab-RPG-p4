@@ -62,6 +62,7 @@ h4{
       min-height: 200px;
   }
   #enemyPic{
+    width:300px;
     animation: FocusPic 1s; 
     margin:0 0 10xp 0;
 } 
@@ -73,7 +74,9 @@ h4{
 		filter: blur(0px)
 	}
 }
-
+#PicWrap{
+    min-height:300px;
+}
 .off{
     display: none;
 }
