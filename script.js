@@ -97,9 +97,9 @@ function startCombat(){
     
     if (character.wins < enemy.winsNeeded){
       setTimeout(function(){
-        enemyAttack();
-        enemyShake.classList.remove("enemyShake");        
-      }, 1000);    
+        enemyShake.classList.remove("enemyShake"); 
+        enemyAttack();       
+      }, 1500);    
     }
     
   });
@@ -115,7 +115,7 @@ function startCombat(){
       
   }else if (character.healRemaining > 0 ){  
         var restore = character.heal();      
-        battleDesc.innerHTML =`You have healed yourself by ${restore} points! you only have ${character.healRemaining} heals remaining.`;
+        battleDesc.innerHTML =`You have healed yourself by ${restore} points! You only have ${character.healRemaining} heals remaining.`;
         var bar = getPercent(character.health, character.totalhealth);
         yourHealthBar.style.width =`${bar}%`;
         yourHealthBar.classList.add("heal");
@@ -151,7 +151,7 @@ function startCombat(){
     character.health -= attack;
     var bar = getPercent(character.health, character.totalhealth);
     yourHealthBar.style.width =`${bar}%`;
-    battleDesc.innerHTML = `${enemy.name} attacks and does ${attack} damage, ${character.name} HP is at ${character.health}.`;
+    battleDesc.innerHTML = `${enemy.name} attacks and does ${attack} damage, ${character.name}'s HP is at ${character.health}.`;
     if (character.health <= 0){
       battleDesc.innerHTML = `${enemy.name} HAS DEFEATED YOU!`;
       setTimeout(function(){  GameOver();   }, 3000);
